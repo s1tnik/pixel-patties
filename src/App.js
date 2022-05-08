@@ -1,21 +1,17 @@
 import "./App.scss";
-import burgerLoading from "./assets /burger-loading.gif";
-import LoadingDots from "./components /LoadingDots";
+import LoadingScreen from "./screens/LoadingScreen";
+import HorizontalScroll from "react-scroll-horizontal";
+import HomeScreen from "./screens/HomeScreen";
+import AboutScreen from "./screens/AboutScreen";
 
 function App() {
   return (
     <div className="container">
-      <div className="loading-container">
-        <div className="img-container">
-          <img src={burgerLoading} alt="loading" />
-        </div>
-        <div className="heading-container">
-          <p className="heading">Cooking something</p>
-          <div className="loading-dots">
-            <LoadingDots />
-          </div>
-        </div>
-      </div>
+      <HorizontalScroll pageLock={true} reverseScroll>
+        <LoadingScreen />
+        <HomeScreen />
+        <AboutScreen />
+      </HorizontalScroll>
     </div>
   );
 }
