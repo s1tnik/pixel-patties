@@ -1,29 +1,30 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import scrollTo from "../helpers/scrollTo";
 const Navigation = ({ screens, children }) => {
-  const [currentScreen, setCurrentScreen] = useState(0);
+  const currentScreen = useRef(0);
   const lastWheelCall = useRef(null);
 
-  const scrollNavigation = ({ deltaY }) => {
-    if (Math.abs(deltaY) < 10) return;
+  const scrollNavigation = useCallback(
+    ({ deltaY }) => {
+      if (
+        lastWheelCall.current === null ||
+        lastWheelCall.current + 500 - Date.now() < 0
+      ) {
+        lastWheelCall.current = Date.now();
 
-    if (
-      lastWheelCall.current === null ||
-      lastWheelCall.current + 300 - Date.now() < 0
-    ) {
-      if (deltaY > 0 && currentScreen + 1 < screens.length) {
-        scrollTo(screens[currentScreen + 1]);
-        return setCurrentScreen((prevState) => prevState + 1);
+        if (deltaY > 0 && currentScreen.current < screens.length - 1) {
+          scrollTo(screens[currentScreen.current + 1]);
+          currentScreen.current = currentScreen.current + 1;
+        }
+
+        if (deltaY < 0 && currentScreen.current > 0) {
+          scrollTo(screens[currentScreen.current - 1]);
+          currentScreen.current = currentScreen.current - 1;
+        }
       }
-
-      if (deltaY < 0 && currentScreen - 1 >= 0) {
-        scrollTo(screens[currentScreen - 1]);
-        return setCurrentScreen((prevState) => prevState - 1);
-      }
-    }
-
-    lastWheelCall.current = Date.now();
-  };
+    },
+    [currentScreen.current, screens]
+  );
 
   useEffect(() => {
     if (screens.every(({ current }) => current)) {
