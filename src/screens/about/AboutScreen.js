@@ -1,6 +1,7 @@
 import React from "react";
-import windowImage from "../assets /images/window.png";
-import burgerImage from "../assets /images/burger.png";
+import "./styles.scss";
+import windowImage from "../../assets /images/window.png";
+import burgerImage from "../../assets /images/burger.png";
 import Slider from "react-slick";
 
 const settings = {
@@ -21,9 +22,9 @@ const renderSlider = () => (
   </Slider>
 );
 
-export default function AboutScreen() {
+const AboutScreen = React.forwardRef((_, ref) => {
   return (
-    <div className="about-container">
+    <div ref={ref} className="about-container">
       <div className="wrapper">
         <div className="information">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad aliquid
@@ -39,4 +40,6 @@ export default function AboutScreen() {
       </div>
     </div>
   );
-}
+});
+
+export default AboutScreen;

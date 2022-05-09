@@ -1,10 +1,11 @@
 import React from "react";
-import burgerLoading from "../assets /gifs/burger-loading.gif";
-import LoadingDots from "../components /LoadingDots";
+import "./styles.scss";
+import burgerLoading from "../../assets /gifs/burger-loading.gif";
+import LoadingDots from "../../components /LoadingDots";
 
-export default function LoadingScreen() {
+export default function LoadingScreen(props) {
   return (
-    <div className="loading-container">
+    <div ref={props.ref} className="loading-container">
       <div className="img-container">
         <img src={burgerLoading} alt="loading" />
       </div>
