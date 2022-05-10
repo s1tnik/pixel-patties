@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.scss";
 import windowImage from "../../assets /images/window.png";
 import burgerImage from "../../assets /images/burger.png";
+import textBlockImage from "../../assets /images/text-block.png";
 import Slider from "react-slick";
 
 const settings = {
@@ -22,14 +23,18 @@ const renderSlider = () => (
   </Slider>
 );
 
-const AboutScreen = React.forwardRef((_, ref) => {
+const RoadMapScreen = React.forwardRef((_, ref) => {
   return (
     <div ref={ref} className="about-container">
       <div className="wrapper">
         <div className="information">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad aliquid
-          autem delectus dicta, eaque excepturi expedita fugiat, in modi nostrum
-          provident rem repellat sit vel. Dignissimos molestiae nisi veritatis.
+          <img src={textBlockImage} alt="text-block" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad
+            aliquid autem delectus dicta, eaque excepturi expedita fugiat, in
+            modi nostrum provident rem repellat sit vel. Dignissimos molestiae
+            nisi veritatis.
+          </p>
         </div>
         <div className="about-slider">
           <div className="slider-container">
@@ -42,4 +47,4 @@ const AboutScreen = React.forwardRef((_, ref) => {
   );
 });
 
-export default AboutScreen;
+export default RoadMapScreen;

@@ -1,0 +1,49 @@
+.team-container {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../assets /images/bg-home.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+
+      img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    .team-members {
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px;
+
+      .member {
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        img {
+          width: 100%;
+        }
+
+      }
+    }
+
+  }
+
+
+
+
+}

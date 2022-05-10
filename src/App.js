@@ -2,23 +2,39 @@ import "./App.scss";
 import LoadingScreen from "./screens/loading/LoadingScreen";
 import HorizontalScroll from "react-scroll-horizontal";
 import HomeScreen from "./screens/home/HomeScreen";
-import AboutScreen from "./screens/about/AboutScreen";
+import RoadMapScreen from "./screens/roadmap/RoadMapScreen";
 import useWindowSize from "./hooks/useWindowSize";
 import { useRef } from "react";
 import Navigation from "./components /Navigation";
+import SneakPeaksScreen from "./screens/sneakpeaks/SneakPeaksScreen";
+import TeamScreen from "./screens/team/TeamScreen";
+import FAQScreen from "./screens/faq/FAQScreen";
 
 function App() {
   const { width: screenWidth } = useWindowSize();
 
   const homeContainer = useRef(null);
   const aboutContainer = useRef(null);
-  let screens = [homeContainer, aboutContainer];
+  const sneakPeaksContainer = useRef(null);
+  const teamContainer = useRef(null);
+  const faqContainer = useRef(null);
+
+  let screens = [
+    homeContainer,
+    aboutContainer,
+    sneakPeaksContainer,
+    teamContainer,
+    faqContainer,
+  ];
 
   const renderScreens = () => (
     <>
       {/*<LoadingScreen />*/}
       <HomeScreen ref={homeContainer} />
-      <AboutScreen ref={aboutContainer} />
+      <RoadMapScreen ref={aboutContainer} />
+      <SneakPeaksScreen ref={sneakPeaksContainer} />
+      <TeamScreen ref={teamContainer} />
+      <FAQScreen ref={faqContainer} />
     </>
   );
 
