@@ -8,7 +8,7 @@ const Navigation = ({screens, children}) => {
         ({deltaY}) => {
             if (
                 lastWheelCall.current === null ||
-                lastWheelCall.current + 500 - Date.now() < 0
+                lastWheelCall.current + 1300 - Date.now() < 0
             ) {
                 lastWheelCall.current = Date.now();
 

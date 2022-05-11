@@ -1,24 +1,10 @@
 .team-container {
-  width: 100vw;
-  height: 100vh;
-  background: url("../../assets /images/bg-home.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 
   .wrapper {
 
-    .title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 50px;
-
-      img {
-        width: 100%;
-        max-width: 400px;
-      }
-    }
 
     .team-members {
 
@@ -42,8 +28,6 @@
     }
 
   }
-
-
 
 
 }

@@ -1,38 +1,21 @@
 .sneakpeaks-container {
-  width: 100vw;
-  height: 100vh;
-  background: url("../../assets /images/bg-home.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 
+
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    .title {
-      text-align: center;
-
-      img {
-        width: 100%;
-        max-width: 750px;
-      }
-    }
 
     .images-container {
       background: url("../../assets /images/sneak-frame.png") center/contain no-repeat ;
       width: 70vw;
-      height: 35vw;
+      height: 30vw;
       display: flex;
       align-items: center;
       justify-content: center;
 
       .images-wrapper {
-        width: 80%;
-        height: 80%;
+        width: 70%;
         padding: 40px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -40,6 +23,9 @@
 
 
         .item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           img {
             width: 100%;
