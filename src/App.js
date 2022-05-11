@@ -1,6 +1,4 @@
 import "./App.scss";
-import LoadingScreen from "./screens/loading/LoadingScreen";
-import HorizontalScroll from "react-scroll-horizontal";
 import HomeScreen from "./screens/home/HomeScreen";
 import RoadMapScreen from "./screens/roadmap/RoadMapScreen";
 import useWindowSize from "./hooks/useWindowSize";
