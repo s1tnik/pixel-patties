@@ -28,10 +28,10 @@ function App() {
     const renderScreens = () => (
         <>
             {/*<LoadingScreen />*/}
-            <HomeScreen ref={homeContainer}/>
-            <RoadMapScreen ref={aboutContainer}/>
-            <SneakPeaksScreen ref={sneakPeaksContainer}/>
-            <TeamScreen ref={teamContainer}/>
+            {/*<HomeScreen ref={homeContainer}/>*/}
+            {/*<RoadMapScreen ref={aboutContainer}/>*/}
+            {/*<SneakPeaksScreen ref={sneakPeaksContainer}/>*/}
+            {/*<TeamScreen ref={teamContainer}/>*/}
             <FAQScreen ref={faqContainer}/>
         </>
     );

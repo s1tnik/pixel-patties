@@ -3,6 +3,11 @@
     src: local('Fipps'), url(./fonts/Fipps.otf) format('woff');
 }
 
+@font-face {
+    font-family: '3Dventure';
+    src: local('Fipps'), url(./fonts/3Dventure.ttf) format('woff');
+}
+
 
 html,
 div,
