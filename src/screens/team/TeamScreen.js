@@ -11,7 +11,7 @@ const TeamScreen = React.forwardRef((_, ref) => {
       <div ref={ref} className="team-container">
         <div className="wrapper">
           <div className="team-members">
-            <div className="member">
+            <div className="member first">
               <div className="image">
                 <img src={imageFrame} alt="face" />
               </div>
@@ -19,7 +19,7 @@ const TeamScreen = React.forwardRef((_, ref) => {
                 <img src={descriptionFrame} alt="frame" />
               </div>
             </div>
-            <div className="member">
+            <div className="member second">
               <div className="image">
                 <img src={imageFrame} alt="face" />
               </div>
@@ -27,7 +27,7 @@ const TeamScreen = React.forwardRef((_, ref) => {
                 <img src={descriptionFrame} alt="frame" />
               </div>
             </div>
-            <div className="member">
+            <div className="member third">
               <div className="image">
                 <img src={imageFrame} alt="face" />
               </div>

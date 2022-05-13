@@ -20,9 +20,6 @@ const SneakPeaksScreen = React.forwardRef((_, ref) => {
   const [numberOfItems, setNumberOfItems] = useState(8);
 
   const { width: screenWidth } = useWindowSize();
-  const gridStyle = {
-    gridTemplateColumns: `repeat(${numberOfItems / 2}, 1fr)`,
-  };
 
   useEffect(() => {
     if (screenWidth < 800 && numberOfItems !== 6) {
@@ -39,7 +36,7 @@ const SneakPeaksScreen = React.forwardRef((_, ref) => {
       <div ref={ref} className="sneakpeaks-container">
         <div className="wrapper">
           <div className="images-container">
-            <div style={gridStyle} className="images-wrapper">
+            <div className="images-wrapper">
               {images.slice(0, numberOfItems).map((src) => (
                 <div className="item" key={src}>
                   <img src={srcImage} alt="burger" />
