@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import scrollTo from "../helpers/scrollTo";
 
-const Navigation = ({ screens, children }) => {
-  const currentScreen = useRef(0);
+const Navigation = ({ screens, children, currentScreen }) => {
   const lastWheelCall = useRef(null);
 
   const scrollNavigation = useCallback(

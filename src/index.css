@@ -8,6 +8,12 @@
     src: local('Fipps'), url(./fonts/3Dventure.ttf) format('woff');
 }
 
+@font-face {
+    font-family: 'Overpass';
+    src: local('Overpass'), url(./fonts/Overpass.ttf) format('woff');
+}
+
+
 
 html,
 div,
