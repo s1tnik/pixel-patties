@@ -35,14 +35,12 @@ const SneakPeaksScreen = React.forwardRef((_, ref) => {
     <DefaultLayout title="sneak peak">
       <div ref={ref} className="sneakpeaks-container">
         <div className="wrapper">
-          <div className="images-container">
-            <div className="images-wrapper">
-              {images.slice(0, numberOfItems).map((src) => (
-                <div className="item" key={src}>
-                  <img src={srcImage} alt="burger" />
-                </div>
-              ))}
-            </div>
+          <div className="images-wrapper">
+            {images.slice(0, numberOfItems).map((src) => (
+              <div className="item" key={src}>
+                <img src={srcImage} alt="burger" />
+              </div>
+            ))}
           </div>
         </div>
       </div>

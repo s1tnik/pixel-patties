@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
 
   @media screen and (max-width: 450px) {
     width: 100vw;
@@ -11,78 +13,52 @@
 
   .wrapper {
 
-    .images-container {
-      background: url("../../assets /images/sneak-frame.png") center/contain no-repeat;
-      width: 70vw;
-      height: 30vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    padding: 50px;
+    width: 100%;
+
+    @media screen and (max-width: 450px) {
+      padding: 0 15px;
+    }
+
+    .images-wrapper {
+      background-color: #bbcdcf;
+      border: 15px solid #8c848c;
+      padding: 35px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
 
 
-      @media screen and (max-width: 1300px) {
-        width: 90vw;
-        height: 37vw;
-      }
-
-      @media screen and (max-width: 1100px) {
-        width: 90vw;
-        height: 42vw;
-      }
-
-      @media screen and (max-width: 900px) {
-        width: 90vw;
-        height: 50vw;
+      @media screen and (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       @media screen and (max-width: 450px) {
+        grid-template-columns: repeat(2, 1fr);
         background: none;
-        width: 100%;
-        height: 100%;
+        border: none;
       }
 
-      .images-wrapper {
-        width: 70%;
-        padding: 40px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 30px;
 
-        @media screen and (max-width: 1100px) {
-          padding: 0;
-          width: 75%;
-        }
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        @media screen and (max-width: 900px) {
-          width: 85%;
-          grid-template-columns: repeat(3, 1fr);
-        }
-
-        @media screen and (max-width: 450px) {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-
-        .item {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          img {
+        img {
+          width: 100%;
+          @media screen and (max-width: 450px) {
+            box-shadow: 12px 12px 0px 0px #8c848c;
             width: 100%;
-
-            @media screen and (max-width: 450px) {
-              box-shadow: 12px 12px 0px 0px #8c848c;
-            }
-
-            @media screen and (max-width: 800px) {
-              width: 90%;
-            }
-
           }
+
+          @media screen and (max-width: 800px) {
+            width: 75%;
+          }
+
         }
       }
     }
   }
-
 }
+

@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
 
   @media screen and (max-width: 450px) {
     width: 100vw;
@@ -30,26 +32,10 @@
       }
 
       @media screen and (max-width: 450px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "first second"
-                             "third third";
-        grid-gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 70px;
       }
 
-      .first {
-        grid-area: first;
-      }
-
-      .second {
-        grid-area: second;
-      }
-
-      .third {
-        grid-area: third;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
 
       .member {
         max-width: 225px;
@@ -59,13 +45,6 @@
         justify-content: center;
         gap: 15px;
 
-        &:last-child {
-          max-width: 46%;
-          @media screen and (max-width: 450px) {
-            margin: 0 auto;
-            grid-row: span;
-          }
-        }
 
         img {
           width: 100%;
