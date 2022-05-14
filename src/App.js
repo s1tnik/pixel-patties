@@ -2,12 +2,13 @@ import "./App.scss";
 import HomeScreen from "./screens/home/HomeScreen";
 import RoadMapScreen from "./screens/roadmap/RoadMapScreen";
 import useWindowSize from "./hooks/useWindowSize";
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import Navigation from "./components /Navigation";
-import SneakPeaksScreen from "./screens/sneakpeaks/SneakPeaksScreen";
+import AboutScreen from "./screens/about/AboutScreen";
 import TeamScreen from "./screens/team/TeamScreen";
 import FAQScreen from "./screens/faq/FAQScreen";
 import navbarTitle from "./assets /images/navbar-title.png";
+import scrollTo from "./helpers/scrollTo";
 
 const links = ["home", "about", "roadmap", "team", "faq"];
 
@@ -16,16 +17,17 @@ function App() {
 
   const homeContainer = useRef(null);
   const aboutContainer = useRef(null);
-  const sneakPeaksContainer = useRef(null);
+  const roadMapContainer = useRef(null);
   const teamContainer = useRef(null);
   const faqContainer = useRef(null);
 
   const currentScreen = useRef(0);
+  const [current, setCurrent] = useState(0);
 
   let screens = [
     homeContainer,
     aboutContainer,
-    sneakPeaksContainer,
+    roadMapContainer,
     teamContainer,
     faqContainer,
   ];
@@ -34,37 +36,60 @@ function App() {
     <>
       {/*<LoadingScreen />*/}
       <HomeScreen ref={homeContainer} />
-      <RoadMapScreen ref={aboutContainer} />
-      <SneakPeaksScreen ref={sneakPeaksContainer} />
+      <AboutScreen ref={aboutContainer} />
+      <RoadMapScreen ref={roadMapContainer} />
       <TeamScreen ref={teamContainer} />
       <FAQScreen ref={faqContainer} />
     </>
   );
 
   const isActive = (index) => {
-    return index === currentScreen.current;
+    return index === current;
   };
 
-  const renderLinks = useCallback(() => {
+  const handleOnLinkClick = (index) => {
+    const times = index - currentScreen.current;
+    currentScreen.current = index;
+    setCurrent(index);
+
+    window.document.querySelector(".scroll-navigation").scrollBy({
+      top: 0,
+      left: window.innerWidth * times,
+      behavior: "smooth",
+    });
+  };
+
+  const renderLinks = () => {
     return links.map((link, index) => (
       <>
-        <div className={`link ${isActive(index) ? "active" : ""}`}>{link}</div>
+        <div
+          onClick={() => handleOnLinkClick(index)}
+          className={`link ${isActive(index) ? "active" : ""}`}
+        >
+          {link}
+        </div>
         {index !== links.length - 1 && <span>|</span>}
       </>
     ));
-  }, [currentScreen]);
+  };
 
   return (
     <div className="container">
       {screenWidth > 450 ? (
         <>
           <div className="navbar">
-            <div className="title">
-              <img src={navbarTitle} alt="pixel patties" />
-            </div>
+            {screenWidth > 850 && (
+              <div className="title">
+                <img src={navbarTitle} alt="pixel patties" />
+              </div>
+            )}
             <div className="links">{renderLinks()}</div>
           </div>
-          <Navigation currentScreen={currentScreen} screens={screens}>
+          <Navigation
+            onUpdate={(index) => setCurrent(index)}
+            currentScreen={currentScreen}
+            screens={screens}
+          >
             {renderScreens()}
           </Navigation>
         </>

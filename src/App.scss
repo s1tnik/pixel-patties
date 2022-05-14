@@ -19,6 +19,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width: 850px) {
+      justify-content: center;
+    }
+
     .title {
       margin-left: 25px;
 
@@ -33,7 +37,12 @@
       margin-right: 25px;
       display: flex;
 
+      @media screen and (max-width: 850px) {
+        margin-right: 0px;
+      }
+
       .link {
+        cursor: pointer;
         &.active {
           color: #d0a823;
         }
@@ -92,7 +101,7 @@
     font-size: 90px;
     color: #f2de9f;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
 
     @media screen and (max-width: 900px) {
       font-size: 70px;
@@ -110,9 +119,6 @@
     }
 
     flex: 1;
-    //display: flex;
-    //justify-content: center;
-    //align-items: center;
   }
 }
 

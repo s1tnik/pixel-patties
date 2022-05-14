@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import scrollTo from "../helpers/scrollTo";
 
-const Navigation = ({ screens, children, currentScreen }) => {
+const Navigation = ({ screens, children, currentScreen, onUpdate }) => {
   const lastWheelCall = useRef(null);
 
   const scrollNavigation = useCallback(
@@ -19,6 +19,7 @@ const Navigation = ({ screens, children, currentScreen }) => {
             behavior: "smooth",
           });
           currentScreen.current = currentScreen.current + 1;
+          onUpdate(currentScreen.current);
         }
 
         if (deltaY < 0 && currentScreen.current > 0) {
@@ -28,6 +29,7 @@ const Navigation = ({ screens, children, currentScreen }) => {
             behavior: "smooth",
           });
           currentScreen.current = currentScreen.current - 1;
+          onUpdate(currentScreen.current);
         }
       }
     },

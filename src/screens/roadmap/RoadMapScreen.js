@@ -27,7 +27,7 @@ const renderSlider = () => (
 const RoadMapScreen = React.forwardRef((_, ref) => {
   return (
     <DefaultLayout title="road map">
-      <div ref={ref} className="about-container">
+      <div ref={ref} className="roadmap-container">
         <div className="wrapper">
           <div className="information">
             <img src={textBlockImage} alt="text-block" />
