@@ -24,17 +24,21 @@ $shadow: #8c848c;
 
 
     .questions-container {
-      max-width: 950px;
+      max-width: 50%;
       width: 100%;
       font-family: "Fipps", sans-serif;
       display: flex;
       flex-direction: column;
       gap: 56px;
 
+      @media screen and (max-width: 900px) {
+        max-width: 80%;
+
+      }
+
       @media screen and (max-width: 600px) {
         font-size: calc(0.45em + 1vmin);
         gap: calc(3.95em + 1vmin)
-
       }
 
       @media screen and (max-width: 450px) {
