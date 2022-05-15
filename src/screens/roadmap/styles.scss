@@ -42,29 +42,37 @@
       font-family: "Overpass", sans-serif;
       color: #69371A;
       position: relative;
-
+      text-align: center;
 
       h3 {
         z-index: 1;
         color: #39507b;
         text-transform: uppercase;
         margin-bottom: 25px;
+        width: 60%;
+
+        @media screen and (max-width: 1100px) {
+          margin-top: 0;
+          width: 100%;
+        }
+
       }
 
       p {
         z-index: 1;
-        max-width: 370px;
+        width: 60%;
 
         @media screen and (max-width: 1100px) {
           margin-top: 0;
-          max-width: 100%;
+          width: 100%;
         }
 
       }
 
       img {
         position: absolute;
-        height: 90%;
+        height: 100%;
+        width: auto;
         bottom: 0;
         top: 0;
 
@@ -83,7 +91,8 @@
       flex: 1;
 
       @media screen and (max-width: 1100px) {
-        width: 50%;
+        width: 45%;
+        flex: none;
       }
 
 
@@ -100,7 +109,7 @@
       }
 
       display: flex;
-      align-items: center;
+      align-items: end;
       justify-content: center;
 
       .slider-container {
@@ -117,6 +126,10 @@
             display: flex;
             justify-content: center !important;
             align-items: center;
+
+            .gamepad {
+              transform: translateY(6%);
+            }
 
             img {
               margin: 0 auto;

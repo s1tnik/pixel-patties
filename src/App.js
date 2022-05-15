@@ -13,7 +13,7 @@ import scrollTo from "./helpers/scrollTo";
 const links = ["home", "about", "roadmap", "team", "faq"];
 
 function App() {
-  const { width: screenWidth } = useWindowSize();
+  const { width: screenWidth, height: screenHeight } = useWindowSize();
 
   const homeContainer = useRef(null);
   const aboutContainer = useRef(null);
@@ -75,7 +75,7 @@ function App() {
 
   return (
     <div className="container">
-      {screenWidth > 450 ? (
+      {(screenWidth > 450 && screenHeight > 680) ? (
         <>
           <div className="navbar">
             {screenWidth > 850 && (
