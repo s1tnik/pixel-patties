@@ -14,6 +14,106 @@
   .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+
+    @media screen and (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .description {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      position: relative;
+
+
+      > img {
+        width: 80%;
+
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+
+      .snacks {
+        position: absolute;
+        left: 18%;
+        bottom: -2%;
+        width: 100px;
+
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px;
+        position: absolute;
+        left: 20%;
+        height: 100%;
+        font-family: "Overpass", sans-serif;
+        color: #69371A;
+
+        @media screen and (max-width: 900px) {
+          gap: 15px;
+          padding: 0 30px;
+          width: 100%;
+          position: relative;
+          left: 0;
+          text-align: center;
+        }
+
+        h3 {
+          color: #39507b;
+          text-transform: uppercase;
+        }
+
+        p {
+
+        }
+      }
+    }
+
+    .showcase {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      @media screen and (max-width: 900px) {
+        width: 50%;
+      }
+
+      @media screen and (max-width: 650px) {
+        width: 70%;
+      }
+
+      @media screen and (max-width: 500px) {
+        width: 80%;
+      }
+
+      .row {
+        display: flex;
+        gap: 30px;
+
+        .item {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
 

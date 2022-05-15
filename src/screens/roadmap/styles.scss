@@ -38,12 +38,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: "Fipps", sans-serif;
+      flex-direction: column;
+      font-family: "Overpass", sans-serif;
       color: #69371A;
       position: relative;
 
+
+      h3 {
+        z-index: 1;
+        color: #39507b;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+      }
+
       p {
-        margin-top: 80px;
         z-index: 1;
         max-width: 370px;
 
@@ -99,9 +107,11 @@
         position: relative;
 
         .slider {
-          width: 100%;
+          width: 87%;
           position: absolute;
-          bottom: 7%;
+          bottom: 5%;
+          left: 50%;
+          transform: translateX(-50%);
 
           .slider-item {
             display: flex;

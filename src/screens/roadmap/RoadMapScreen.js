@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.scss";
 import windowImage from "../../assets /images/window.png";
 import burgerImage from "../../assets /images/burger.png";
+import gamePadImage from '../../assets /images/gamepad.png'
 import textBlockImage from "../../assets /images/text-block.png";
 import Slider from "react-slick";
 import DefaultLayout from "../../components /DefaultLayout";
@@ -19,7 +20,7 @@ const renderSlider = () => (
       <img src={burgerImage} alt="burger" />
     </div>
     <div className="slider-item">
-      <img src={burgerImage} alt="burger" />
+      <img src={gamePadImage} alt="gamepad" />
     </div>
   </Slider>
 );
@@ -31,6 +32,7 @@ const RoadMapScreen = React.forwardRef((_, ref) => {
         <div className="wrapper">
           <div className="information">
             <img src={textBlockImage} alt="text-block" />
+            <h3>Title</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad
               aliquid autem delectus dicta, eaque excepturi expedita fugiat, in
