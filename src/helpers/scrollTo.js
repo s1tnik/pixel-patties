@@ -1,7 +1,7 @@
-const scrollTo = (ref) => {
+const scrollTo = (ref, smooth = false) => {
   if (ref && ref.current /* + other conditions */) {
     ref.current.scrollIntoView({
-      behavior: "smooth",
+      behavior: smooth ? "smooth" : "auto",
       block: "start",
     });
   }

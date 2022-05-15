@@ -60,7 +60,7 @@ function App() {
                 behavior: "smooth",
             });
         } else {
-            scrollTo(screens[index])
+            scrollTo(screens[index], true)
         }
     };
 

@@ -21,9 +21,14 @@ const AboutScreen = React.forwardRef((_, ref) => {
                 <div className="wrapper">
                     <div style={heightStyle} className="description">
                         <img className="snacks" src={snacks} alt="snacks"/>
-                        <h3>Title</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi mollitia officia
-                            perferendis quam quos, ratione.</p>
+                        <h3>Meet the Patties</h3>
+                        <p>Imagine that food is a language…Then the burger is the language that’s spoken all over the
+                            world. Taking a simple burger as a basis, we went beyond the limits and presented it in a
+                            different light.</p>
+                        <p>The Pixel Patties is a collection of 3,333 badass burgers which grant you an access to the
+                            upcoming HUGE utility of the Patties Ecosystem. Each Pixel Patty is randomly generated from
+                            99 unique traits of different rarities and permanently stored on decentralised web
+                            (IPFS).</p>
                     </div>
                     <div ref={showcaseRef} className="showcase">
                         <div className="row">
