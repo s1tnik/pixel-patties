@@ -1,13 +1,14 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./styles.scss";
 import windowImage from "../../assets /images/window.png";
 import burgerImage from "../../assets /images/burger.png";
 import gamePadImage from '../../assets /images/gamepad.png'
 import plateImage from "../../assets /images/cover cloche_big.png"
 import chestImage from "../../assets /images/MarketPalce.png"
-import textBlockImage from "../../assets /images/text-block.png";
+import pinImage from "../../assets /images/pin.png"
 import Slider from "react-slick";
 import DefaultLayout from "../../components /DefaultLayout";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const settings = {
     infinite: true,
@@ -34,12 +35,17 @@ const renderSlider = () => (
 );
 
 const RoadMapScreen = React.forwardRef((_, ref) => {
+
+    const sliderRef = useRef(null);
+    const {width: screenWidth, height: screenHeight} = useWindowSize();
+    const heightStyle = (sliderRef.current && screenWidth > 1000 && screenHeight < 680) ? {height: `${sliderRef.current.offsetHeight}px`} : {};
+
     return (
-        <DefaultLayout title="road map">
-            <div ref={ref} className="roadmap-container">
+        <DefaultLayout ref={ref} title="road map">
+            <div className="roadmap-container">
                 <div className="wrapper">
-                    <div className="information">
-                        <img src={textBlockImage} alt="text-block"/>
+                    <div style={heightStyle} className="information">
+                        <img src={pinImage} alt="pin" className="pin-image"/>
                         <h3>Title</h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad
@@ -48,7 +54,7 @@ const RoadMapScreen = React.forwardRef((_, ref) => {
                             nisi veritatis.
                         </p>
                     </div>
-                    <div className="about-slider">
+                    <div ref={sliderRef} className="about-slider">
                         <div className="slider-container">
                             <img src={windowImage} alt="window"/>
                             <div className="slider">{renderSlider()}</div>

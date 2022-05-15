@@ -40,8 +40,8 @@ const HomeScreen = React.forwardRef((_, ref) => {
     };
 
     return (
-      <DefaultLayout>
-        <div ref={ref} className="home-container">
+      <DefaultLayout ref={ref}>
+        <div className="home-container">
           <div className="left-side">{burgerFall()}</div>
           {screenWidth < 850 ? <div /> : null}
           <div className="content">

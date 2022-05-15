@@ -52,27 +52,37 @@
           width: 100%;
         }
 
-        //.description {
-        //
-        //  position: relative;
-        //  font-family: Overpass;
-        //
-        //  div {
-        //    position: absolute;
-        //    box-sizing: border-box;
-        //    padding: 15px;
-        //    top: 0;
-        //    left: 0;
-        //    width: 100%;
-        //    height: 100%;
-        //    display: flex;
-        //    align-items: center;
-        //    justify-content: center;
-        //    flex-direction: column;
-        //
-        //    text-align: center;
-        //  }
-        //}
+        .description {
+
+          color: #FFFAFA;
+          position: relative;
+          font-family: Overpass, sans-serif;
+
+          div {
+            position: absolute;
+            box-sizing: border-box;
+            padding: 15px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            text-align: center;
+
+            p {
+
+              &:first-child {
+                color: #b85699;
+              }
+
+              line-height: 1.1;
+            }
+          }
+        }
 
       }
     }

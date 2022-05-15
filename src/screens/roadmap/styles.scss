@@ -14,25 +14,20 @@
   .wrapper {
     height: 100%;
     padding: 0 60px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
 
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1000px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      gap: 25px;
-    }
-
-    @media screen and (max-width: 850px) {
+      gap: 40px;
       padding: 0 30px;
     }
 
-    @media screen and (max-width: 450px) {
-      padding: 0 15px 15px 15px;
-    }
 
     .information {
       display: flex;
@@ -41,75 +36,59 @@
       flex-direction: column;
       font-family: "Overpass", sans-serif;
       color: #69371A;
-      position: relative;
       text-align: center;
+      max-width: 40%;
+      height: 90%;
+      box-shadow: 12px 12px 0px 0px #afa576;
+      background-color: #ded196;
+      position: relative;
 
-      h3 {
-        z-index: 1;
-        color: #39507b;
-        text-transform: uppercase;
-        margin-bottom: 25px;
-        width: 60%;
-
-        @media screen and (max-width: 1100px) {
-          margin-top: 0;
-          width: 100%;
-        }
-
-      }
-
-      p {
-        z-index: 1;
-        width: 60%;
-
-        @media screen and (max-width: 1100px) {
-          margin-top: 0;
-          width: 100%;
-        }
-
-      }
-
-      img {
+      .pin-image {
+        width: 15%;
         position: absolute;
-        height: 100%;
-        width: auto;
-        bottom: 0;
         top: 0;
+        left: 50%;
+        transform: translateY(-45%) translateX(-50%);
 
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: 1000px) {
           display: none;
         }
       }
 
-      @media screen and (max-width: 600px) {
-        font-size: calc(0.55em + 1vmin);
+      @media screen and (max-width: 1000px) {
+        max-width: 100%;
       }
+
+
+      h3 {
+        color: #39507b;
+        text-transform: uppercase;
+        padding: 5px 20px;
+      }
+
+      p {
+        padding: 5px 20px;
+      }
+
     }
+
 
     .about-slider {
 
-      flex: 1;
-
-      @media screen and (max-width: 1100px) {
-        width: 45%;
-        flex: none;
+      @media screen and (max-width: 1000px) {
+          width: 60%;
       }
 
-
-      @media screen and (max-width: 700px) {
-        width: 60%;
+      @media screen and (max-width: 750px) {
+        width: 80%;
       }
 
-      @media screen and (max-width: 600px) {
-        width: 70%;
-      }
-
-      @media screen and (max-width: 450px) {
+      @media screen and (max-width: 550px) {
         width: 100%;
       }
 
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: center;
 
       .slider-container {

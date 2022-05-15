@@ -39,6 +39,20 @@
       justify-content: center;
     }
 
+    @media screen and (max-width: 450px) {
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      left: 0;
+    }
+
+    @media screen and (max-height: 680px) {
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      left: 0;
+    }
+
     .title {
       margin-left: 25px;
       display: flex;
@@ -58,6 +72,10 @@
 
       @media screen and (max-width: 850px) {
         margin-right: 0px;
+      }
+
+      @media screen and (max-width: 450px) {
+        gap: 8px;
       }
 
       .link {

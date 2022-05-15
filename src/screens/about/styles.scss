@@ -12,96 +12,82 @@
 
 
   .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    height: 100%;
+    padding: 0 40px;
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1000px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      gap: 25px;
+      gap: 40px;
+      padding: 0 30px;
     }
 
     .description {
       display: flex;
       align-items: center;
-      justify-content: end;
+      justify-content: center;
+      flex-direction: column;
+      box-shadow: 12px 12px 0px 0px #afa576;
+      background-color: #ded196;
+      height: 100%;
+      max-width: 35%;
+      font-family: Overpass, sans-serif;
+      text-align: center;
       position: relative;
 
-
-      > img {
-        width: 80%;
-
-        @media screen and (max-width: 900px) {
-          display: none;
-        }
+      @media screen and (max-width: 1000px) {
+        max-width: 100%;
       }
 
       .snacks {
         position: absolute;
-        left: 18%;
-        bottom: -2%;
+        left: 0;
+        bottom: -3%;
         width: 150px;
 
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1000px) {
           display: none;
         }
+
       }
 
-      .text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 25px;
-        padding: 30px;
-        position: absolute;
-        left: 20%;
-        height: 100%;
-        font-family: "Overpass", sans-serif;
-        color: #69371A;
 
-        @media screen and (max-width: 900px) {
-          gap: 15px;
-          padding: 0 30px;
-          width: 100%;
-          position: relative;
-          left: 0;
-          text-align: center;
-        }
+      h3 {
+        color: #39507b;
+        text-transform: uppercase;
+        padding: 5px 20px;
+      }
 
-        h3 {
-          color: #39507b;
-          text-transform: uppercase;
-        }
-
-        p {
-
-        }
+      p {
+        padding: 5px 20px;
       }
     }
 
     .showcase {
-      width: 80%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 30px;
+      max-width: 40%;
 
-      @media screen and (max-width: 900px) {
-        width: 50%;
+      @media screen and (max-width: 1000px) {
+        max-width: 50%;
       }
 
-      @media screen and (max-width: 650px) {
-        width: 70%;
+      @media screen and (max-width: 750px) {
+        max-width: 65%;
       }
 
-      @media screen and (max-width: 500px) {
-        width: 80%;
+      @media screen and (max-width: 550px) {
+        max-width: 90%;
       }
+
 
       .row {
         display: flex;

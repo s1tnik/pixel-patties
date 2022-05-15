@@ -8,8 +8,8 @@ import DefaultLayout from "../../components /DefaultLayout";
 
 const TeamScreen = React.forwardRef((_, ref) => {
     return (
-        <DefaultLayout title="team">
-            <div ref={ref} className="team-container">
+        <DefaultLayout ref={ref} title="team">
+            <div className="team-container">
                 <div className="wrapper">
                     <div className="team-members">
                         <div className="member first">
@@ -18,6 +18,11 @@ const TeamScreen = React.forwardRef((_, ref) => {
                             </div>
                             <div className="description">
                                 <img src={descriptionFrame} alt="frame"/>
+                                <div>
+                                    <p>Jasberish</p>
+                                    <p>creative lead</p>
+                                    <p>CG artist</p>
+                                </div>
                             </div>
                         </div>
                         <div className="member second">
@@ -26,6 +31,11 @@ const TeamScreen = React.forwardRef((_, ref) => {
                             </div>
                             <div className="description">
                                 <img src={descriptionFrame} alt="frame"/>
+                                <div>
+                                    <p>Daniel</p>
+                                    <p>strategy</p>
+                                    <p>marketing</p>
+                                </div>
                             </div>
                         </div>
                         <div className="member third">
@@ -34,6 +44,11 @@ const TeamScreen = React.forwardRef((_, ref) => {
                             </div>
                             <div className="description">
                                 <img src={descriptionFrame} alt="frame"/>
+                                <div>
+                                    <p>s1tnik</p>
+                                    <p>developer</p>
+                                    <p>web3</p>
+                                </div>
                             </div>
                         </div>
                     </div>

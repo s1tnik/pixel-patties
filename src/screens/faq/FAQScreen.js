@@ -19,8 +19,8 @@ const FAQScreen = React.forwardRef((_, ref) => {
   };
 
   return (
-    <DefaultLayout title="FAQ">
-      <div ref={ref} className="faq-container">
+    <DefaultLayout ref={ref} title="FAQ">
+      <div className="faq-container">
         <div className="wrapper">
           <div className="questions-container">
             {[...new Array(4)].map((_, index) => (
