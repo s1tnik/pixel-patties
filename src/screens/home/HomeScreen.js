@@ -52,10 +52,7 @@ const HomeScreen = React.forwardRef((_, ref) => {
               <div style={iconStyle} className="icon">
                 <img src={twitterIcon} alt="twitter icon" />
               </div>
-              <div style={iconStyle} className="icon">
-                <img src={twitterIcon} alt="twitter icon" />
-              </div>
-              <div style={iconStyle} className="icon">
+              <div style={{...iconStyle, opacity: .53}} className="icon">
                 <img src={twitterIcon} alt="twitter icon" />
               </div>
             </div>
