@@ -1,4 +1,7 @@
 const isInViewport = function (elem) {
+
+    if (!elem) return;
+
     const bounding = elem.getBoundingClientRect();
     return (
         bounding.top >= 0 &&
