@@ -118,6 +118,12 @@
           }
         }
 
+        @media screen and (max-width: 450px) {
+          &:nth-child(2) {
+            display: flex;
+          }
+        }
+
         .item {
           img {
             width: 100%;
